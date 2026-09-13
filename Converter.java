@@ -1,27 +1,39 @@
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class Main{
 
-        final double USD_RATE = 1.70;
-        final double EURO_RATE = 1.85;
+  public static void main(String[]args){
 
-        System.out.print("Enter the amount you want to convert (AZN): ");
+    Scanner scanner = new Scanner(System.in);
 
-        if (scanner.hasNextDouble()) {
-            double azn = scanner.nextDouble();
+    final double USD_RATE = 1.70;
+    final double EURO_RATE = 1.85;
+    
+    System.out.print("Please the amount you want to convert (AZN): ");
 
-            double usd = azn / USD_RATE;
-            double eur = azn / EURO_RATE;
+    if (scanner.hasNextDouble()) {
 
-            System.out.println("\n+++ Results +++");
-            System.out.printf("USD: %.2f $\n", usd);
-            System.out.printf("EURO: %.2f EUR\n", eur);
-        } else {
-            System.out.println("Error: Please enter a valid numeric value!");
-        }
+      double AZN = scanner.nextDouble();
+      if (AZN > 0){
 
-        scanner.close();
+      
+
+      double USD = AZN / USD_RATE;
+      double EURO = AZN / EURO_RATE;
+
+      System.out.println("\n ------- Result ------");
+      System.out.printf("USD: %.2f $ \n", USD);
+      System.out.printf("EURO: %.2f € \n", EURO);
+    } else {
+
+      System.out.print("Please enter the positive number!"); 
     }
+  } else {
+
+  
+     
+      System.out.print("Please enter the valid number!");
+    }
+  scanner.close();
+  } 
 }
