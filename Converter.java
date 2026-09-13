@@ -21,8 +21,8 @@ public class Main {
           double EURO = AZN / EURO_RATE;
 
           System.out.println("\n ------- Result ------");
-          System.printf("USD: %.2f $ \n", USD);
-          System.printf("EURO: %.2f € \n", EURO);
+          System.out.printf("USD: %.2f $ \n", USD);
+          System.out.printf("EURO: %.2f € \n", EURO);
         } else {
           System.out.print("Please enter the positive number!\n"); 
         }
